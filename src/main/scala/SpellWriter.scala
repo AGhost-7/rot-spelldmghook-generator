@@ -83,15 +83,15 @@ object SpellWriter {
 
 	def writeFile(file: File)(lines: List[String]): Unit = {
 		import java.io._
-		val outFile = new File(FileLocator.root + "hook-generator/output/" + file.getName)
+		val outFile = new File("output/" + file.getName)
 
 		if(!outFile.exists()) outFile.createNewFile()
 
-		val writer = new PrintWriter(new FileOutputStream(file, false))
+		val writer = new PrintWriter(new FileOutputStream(outFile, false))
 
-		val output = lines.mkString("\n")
+
 		lines.foreach(writer.println)
-
+		writer.flush()
 		writer.close()
 	}
 

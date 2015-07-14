@@ -4,7 +4,7 @@ import io.Source
 /** I'm using this so I can avoid hardcoding file paths all over the place. */
 object FileLocator {
 
-	val root = "../"
+	val root = "../rotdev/"
 	val twoDARoot = "2da/"
 	val nssFileRoot = "campaigns/Realms of Trinity/"
 
